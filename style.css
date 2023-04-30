@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+:root{
+    --yellow: #f9ca24;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+html{
+    font-size: 62,5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: .5rem;
+}
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 20rem;
+}
+section{
+    min-height: 100vh;
+    padding: .8rem;
+}
+.btn{
+    padding: .4rem 1rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding: 0.5rem;
+    font-size: .8rem;
+}
+.btn:hover{
+    background-color: var(--yellow);
+}
+.heading{
+    text-align: center;
+    margin: 0 3rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: .2rem solid #fff;
+    color: #fff;
+}
+.heading span{
+    color: var(--yellow);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 20rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .3rem solid var(--yellow);
+}
+header .user .name{
+    font-size: 1.5rem;
+    color: #fff;
+}
+header .user .post{
+    font-size: 1rem;
+    color: #fff;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a {
+    display: block;
+    padding: .4rem;
+    margin: .5rem 0;
+    background: #333;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background: var(--yellow);
+}
+#menu {
+    position: fixed;
+    top: 2rem; right: 2rem;
+    color: #fff;
+    background: #555;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .5rem .7rem;
+    z-index: 1000;
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 3rem;
+    background-image: url(./img/quality.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.fundo-escuro{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.home .content, .education .content{
+    z-index: 3;
+}
+.home h3{
+    font-size: 1.5rem;
+    color: #ddd;
+}
+.home h1{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.home h1 span{
+    color: var(--yellow);
+}
+.home p{
+    font-size: 1rem;
+    color: #ddd;
+    padding: 1rem 0;
+}
+.about .row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.about .row .info{
+    flex: 1 1 20rem;
+    padding: 2rem 1rem;
+    padding-left: 3rem;
+}
+.about .row .info h3{
+    font-size: 1rem;
+    color: var(--yellow);
+    margin: 10px 0;   
+    font-weight: normal;
+}
+.about .row .info h3 span{
+    color: #eee;
+}
+.about .row .counter{
+    flex: 1 1 30rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about .row .counter .box{
+    width: 13rem;
+    background: #222;
+    text-align: center;
+    padding: .5rem;
+    margin: .5rem;
+}
+.about .row .counter .box span{
+    font-size: 2rem;
+    color: var(--yellow);
+}
+.about .row .counter .box h3{
+    font-size: 1rem;
+    color: #fff;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    background-image: url(./img/formation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.education .box-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+.education .box-container .box{
+    width: 12rem;
+    height: 13rem;
+    margin: 2rem 1rem;
+    border-left: .1rem solid #fff;
+    align-self: flex-start;
+    padding-left: 2rem;
+    position: relative;
+}
+.education .box-container .box span{
+    font-size: 1rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 1rem;
+}
+.education .box-container .box h3{
+    font-size: 1rem;
+    color: #fff;
+    line-height: 20px;
+    padding-top: 1rem;
+}
+.education .box-container .box p{
+    font-size: 12px;
+    margin-top: 1rem;
+    text-transform: none;
+    color: #eee;
+}
+.education .box-container .box i{
+    position: absolute;
+    top: -1.5rem; left: -1.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background: var(--yellow);
+}
+.certification .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+.certification .box-container .box{
+    height: 12rem;
+    width: 18rem;
+    margin: 10px 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.certification .box-container .box .box-title{
+    display: none;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 150;
+}
+.certification .box-container .box:hover .box-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.certification .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.certification .box-container .box:hover img{
+    transform: scale(1.2);
+}
+.certification .cert-link{
+    text-decoration: none;
+    color: var(--yellow);
+    margin-left: 15px;
+}
+
+.contact .row{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    padding: 15px;
+}
+.contact .row .content{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+.contact .row .content h3, .contact .row .content h3 a{
+    color: #fff;
+}
+.contact .row .content .title, .contact .row .content i {
+    color: var(--yellow);
+    margin: 15px;
+    margin-right: 10px;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.contact .row .redes{
+    display: flex;
+}
+.contact .row .redes i{
+    font-size: 1.5rem;
+}
+.contact .row form{
+    width: 30rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.contact .row form .box{
+    padding: .5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.contact .row form .message{
+    resize: none;
+}
+.top{
+    position: fixed;
+    bottom: .5rem; right: .1rem;
+    z-index: 1000;
+    display: none;
+}
+.top img{
+    width: 100px;
+}
+
+/* Media queries */
+@media (max-width: 1200px){
+    html{
+        font-size: 80%;
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width: 991px){
+    header{
+        left: -120%;
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 70%;
+    }
+    #menu{
+        display: block;
+    }
+    header.active{
+        left: 0%;
+    }
+    body{
+        padding: 0;
+    }
+}
+
+@media (max-width: 400px){
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+    }
+    .education .box-container .box{
+        width: 100%;
+        height: 10rem;
+    }
+    .certification .box-container .box{
+        width: 100%;
+    }
+    .contact .row .content .title{
+        text-align: center;
+    }
+    .contact .row .content {
+        width: 100%;
+    }
+    .contact .row form{
+        margin: 1rem 0;
+    }
+    .contact .row .redes{
+        justify-content: center;
+    }
+}

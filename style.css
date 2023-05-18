@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 
 :root{
-    --yellow: #f9ca24;
+    --green: #2DB818;
 }
 
 *{
@@ -15,7 +15,7 @@
     transition: all .2s linear;
 }
 *::selection{
-    background: var(--yellow);
+    background: var(--green);
     color: #333;
 }
 html{
@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track{
     background: #222;
 }
 html::-webkit-scrollbar-thumb{
-    background: var(--yellow);
+    background: var(--green);
 }
 body{
     background: #111;
@@ -53,7 +53,7 @@ section{
     font-size: .8rem;
 }
 .btn:hover{
-    background-color: var(--yellow);
+    background-color: var(--green);
 }
 .heading{
     text-align: center;
@@ -64,7 +64,7 @@ section{
     color: #fff;
 }
 .heading span{
-    color: var(--yellow);
+    color: var(--green);
 }
 
 header{
@@ -86,7 +86,7 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .3rem solid var(--yellow);
+    border: .3rem solid var(--green);
 }
 header .user .name{
     font-size: 1.5rem;
@@ -113,7 +113,7 @@ header .navbar ul li a {
     border-radius: 5rem;
 }
 header .navbar ul li a:hover{
-    background: var(--yellow);
+    background: var(--green);
 }
 #menu {
     position: fixed;
@@ -156,7 +156,7 @@ header .navbar ul li a:hover{
     color: #fff;
 }
 .home h1 span{
-    color: var(--yellow);
+    color: var(--green);
 }
 .home p{
     font-size: 1rem;
@@ -178,7 +178,7 @@ header .navbar ul li a:hover{
 }
 .about .row .info h3{
     font-size: 1rem;
-    color: var(--yellow);
+    color: var(--green);
     margin: 10px 0;   
     font-weight: normal;
 }
@@ -200,7 +200,7 @@ header .navbar ul li a:hover{
 }
 .about .row .counter .box span{
     font-size: 2rem;
-    color: var(--yellow);
+    color: var(--green);
 }
 .about .row .counter .box h3{
     font-size: 1rem;
@@ -260,7 +260,7 @@ header .navbar ul li a:hover{
     line-height: 3rem;
     font-size: 1.5rem;
     text-align: center;
-    background: var(--yellow);
+    background: var(--green);
 }
 .certification .box-container{
     display: flex;
@@ -303,7 +303,7 @@ header .navbar ul li a:hover{
 }
 .certification .cert-link{
     text-decoration: none;
-    color: var(--yellow);
+    color: var(--green);
     margin-left: 15px;
 }
 
@@ -326,9 +326,12 @@ header .navbar ul li a:hover{
     color: #fff;
 }
 .contact .row .content .title, .contact .row .content i {
-    color: var(--yellow);
+    color: var(--green);
     margin: 15px;
     margin-right: 10px;
+}
+.contact .row .content a:hover i{
+    transform: scale(1.4);
 }
 .contact .row .content .title{
     text-transform: uppercase;
@@ -354,6 +357,12 @@ header .navbar ul li a:hover{
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+}
+.contact .row form .box:focus{
+    border: 1px solid #2DB818;
+}
+.contact .row form input[type='email'], .message{
+    text-transform: none;
 }
 .contact .row form .message{
     resize: none;

@@ -207,10 +207,18 @@ header .navbar ul li a:hover{
     color: #fff;
 }
 
+.about .certifications{
+    display: flex;
+    justify-content: center;
+}
+.about .certifications img{
+    width: 150px;
+}
+
 .education{
     display: flex;
     flex-direction: column;
-    background-image: url(./img/formation.jpg);
+    background-image: url(./img/formation2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
